@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        for (var contador = 0; contador < 10; contador++) {
+            console.log(contador)
+        }
+console.log('---------------------------------------------')
+
+        var numerosAleatorios = [3, 5, 10, 2, 19, 21, 16];
+        for (var contador = 0; contador < numerosAleatorios.length; contador++) {
+            console.log(`${contador} - ${numerosAleatorios[contador]}`)
+        }
+
+console.log('---------------------------------------------')
+
+        for (var i = numerosAleatorios.length - 1; i >= 0; i--) {
+            console.log(`${i} - ${numerosAleatorios[i]}`)
+        }
+
+console.log('----------------------------------------------')
+
+        var condicao = true;
+        var contador = 1;
+
+        for (; condicao;) {
+        if(contador % 5 === 0) {
+            condicao = false
+        }
+        console.log(`condição booleana simples: ${contador}`);
+        ++contador;
+    }
+console.log('------------------------------------------------')
+
+        for (var i = 0; i < 10; i++) {
+            if(i === 5){
+                break;
+            }
+            console.log(`Parando com o Break: ${i}`)
+        }
+
+console.log('------------------------------------------------')
+
+        for (var i = 0; i < 50; i++) {
+            if(i % 2 === 0 && i % 2 !== 0) {
+                continue;
+            }
+            console.log('ultilizando continue - ', i)
+        }
+
+console.log("-------------------------------------------------")
+
+        // for of, atalho para o array a varialvel se alto declara
+        //exemplo
+
+        var numerosAleatorios = [3, 5, 10, 2, 19, 21, 16];
+        for (var num of numerosAleatorios) {
+            console.log('for of', num)
+        }
+
+console.log('---------------------------------------------------')
+
+        for (var i = 1; i <= 5; i++) {
+            for (var j = 1; j <= 5; j++) {
+                if (j % 2 === 0) {
+                    continue;
+                }
+
+                if (j > 5) {
+                    break;
+                }
+                     console.log(`i: ${i} - j: ${j}`)
+            }
+        }
+
+console.log('---------------------------------------------------')        
+
+        for (var contador = 0; contador < 100; contador++) {
+            if (contador % 3 === 0 && contador % 5 === 0) {
+                console.log(i, 'PING - PONG')
+            } else if (contador % 3 === 0) {
+                console.log(i, 'PING');
+            } else if (contador % 5 === 0) {
+                console.log(i, 'PONG')
+            }
+        }
+    </script>
+</body>
+</html>
