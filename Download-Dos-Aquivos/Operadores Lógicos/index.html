@@ -8,7 +8,50 @@
 </head>
 <body>
     <script>
+        var a = true;
+        var b = false;
         
+    // valor de negação (!)
+        console.log(!a);
+        console.log(!b);
+
+    // duas negações (!!)
+    // a velha regra de matematica menos com menos é mais
+    // e mais com menos é menos
+        console.log(!!a);
+        console.log(!!b);
+
+    // valores falsos null, undefined, '', false, 0
+
+        console.log(!null);
+
+console.log('--------------------------------------------------');
+
+    // operador end (&&) ele testa quais são verdadeiros neste caso
+    // e ele me retorna o ultimo valor se todos estiverem verdadeiro
+        console.log(10 && 'texot' && 'Video');
+
+    // quando tem algum valor falso, ele me retorna o valor falso.
+        console.log(null && 'Video');
+
+        console.log('oi' && 0 && 'Dev');
+
+    // neste caso ele nem precisa terminar o processo para retornar algo falso
+        console.log("false" && 100 && '' && 'teste' && null);
+
+        console.log(10 > 5 && 7 < 10);
+
+        console.log(10 > 5 && 10 > 11);
+
+console.log('---------------------------------------------------');
+
+    // operador ou (||) ele procura por uma verdadeira se caso tenha verdadeira e falsa e ele retorna o primeiro valor verdadeiro, ou se for tudo falso ele retorna a ultima falsa
+
+        console.log(null || 'Video');
+
+        console.log(null || 'Video' || 26);
+
+    
     </script>
 </body>
 </html>
