@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch-case</title>
+</head>
+<body>
+    <script>
+    // não sei explicar muito bem, mas ele basicamente testa os valores e cai aonde voce pediu.
+
+    // o valor *default* ele procura pela cor, caso ela não tenha ele volta a cor programada.
+
+        var cor = 'amarelo';
+        switch(cor) {
+            case 'azul':
+                console.log('Cor azul');
+                break;
+
+            case 'verde':
+                console.log('Cor verde');
+                break;
+                
+            case 'amarelo':
+                console.log('Cor amarelo');
+                break;
+
+            default:
+                console.log('Cor rosa');
+                break;
+        }
+
+console.log('------------------------------------------------------');
+
+    // multi case
+
+        switch(cinza) {
+            case 'azul':
+            case 'roxo':
+            case 'verde':
+                console.log('Cor fria!');
+                break;
+
+            case 'vermelho':
+            case 'amarelo':
+            case 'laranja':
+                console.log('Cor quente!');
+                break;
+
+            default:
+                console.log('Não identificado');
+                break;
+        }
+
+        
+    </script>
+</body>
+</html>

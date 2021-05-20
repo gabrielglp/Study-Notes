@@ -51,6 +51,13 @@ console.log('---------------------------------------------------');
 
         console.log(null || 'Video' || 26);
 
+        console.log(10 > 6 || 10 < 11);
+
+    // ele vai dar true por conta que ele resolve o que esta na frente no caso o ('video'  && 2050), e nisso ele me voltara o 2050 justamente por ter se reolvido ja com o 'video'.
+
+        console.log('Video' && 2050 || '' && 26);
+
+        console.log(null || !'' && 'Video');
     
     </script>
 </body>
