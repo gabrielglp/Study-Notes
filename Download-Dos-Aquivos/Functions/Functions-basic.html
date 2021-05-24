@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions basic</title>
+</head>
+<body>
+    <script>
+    // function basicamente é voce utilizar um codigo e dar um nome para aquele trecho de codigo, sendo assim voce pode chamar esse codigo a qualquer momento.
+
+        function escreva() {
+            console.log('Olá, programador');
+        }
+
+        escreva();
+
+console.log('-------------------------------------------------------------')
+
+    // function com parametro.
+
+        function mensagem(escreva) {
+            console.log(mensagem)
+        }
+
+        mensagem('Hello');
+        mensagem('Olá');
+
+console.log('-------------------------------------------------------------')
+
+    // function que retorna valores
+
+        function soma(a, b) {
+            return a + b;
+        }
+
+        var resultadoSoma = soma(10, 5);
+        console.log(resultadoSoma);
+
+        /* ou
+
+        console.log(soma(10, 5));
+
+        function soma(d, e) {
+            return d * e;
+        }
+
+        var resultadoSoma = soma(10, 2);
+        console.log(resultadoSoma); */
+
+console.log('-------------------------------------------------------------')
+
+        function somaTudo(numeros) {
+            var total = 0;
+
+            for (var num of numeros) {
+                total = total + num;
+            }
+
+            return total;
+        }
+        var array = [5, 3, 5, 7, 6, 10];
+        var resultado = somaTudo(array);
+        console.log(resultado)
+
+        /*ou
+
+        console.log(somaTudo([5, 3, 5, 7, 6, 10])); */
+
+console.log('-------------------------------------------')
+
+    // usando parametro rest
+
+        function escrevaEndereco(rua, cidade, pais, ...complementos) {
+            console.log(rua);
+            console.log(cidade);
+            console.log(pais);
+
+            console.log(complementos)
+    }
+        
+        escrevaEndereco('Rua Jose..', 'RJ', 'Brasil', 'Estado de Janeiro', 'casa 15');
+
+console.log('-------------------------------------------')
+
+    // função auto invocável
+    // ela serve para proteger variaveis, fechar um escopo de funções privadas ou justamente para seu codigo não misturar com uma biblioteca terceira
+
+        (function autoExecuta(nome) {
+            console.log('Executei', nome);
+        }('Gabriel'));
+
+        var subtraiDoisNumeros = function (a, b) {
+            return a - b;
+        };
+
+        console.log(subtraiDoisNumeros(9, 5));
+
+    </script>
+</body>
+</html>
