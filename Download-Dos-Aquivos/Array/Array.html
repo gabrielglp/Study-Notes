@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+    // Array é um tipo de valor que é permitido voce guardar outros diversos valores no JS
+    // lembrando que na promação se começa contado pelo zero.
+
+        var numeros = [1, 2, 5, 82, 99];
+        console.log(numeros);
+
+    // forma de imprimir somente o numero desejado ( algo[] )
+
+        console.log(numeros[1]);
+        console.log(numeros[3]);
+
+    // descobrindo a quantidade de numeros no Array ( .length )
+
+        console.log(numeros.length);
+
+    // removendo o ultimo elemento de seu Array ( .pop() )
+
+        console.log(numeros.pop());
+        console.log(numeros);
+
+        // ou
+
+        /*var numeroRetornado = numeros.pop();
+        console.log(numerosRetornado);
+        console.log(numeros);*/
+
+    // modo ( .slice(0, 5) ), ele me retorna uma fatia do meu Array. vale informar que ele não retorna a ultima posição neste caso ta assim    (1, 3) então ele irá mandar do Array [2, 5].
+    
+
+        console.log(numeros.slice(1, 3));
+
+        // ou voce pode pegar e colcoar uma posição só que vai daquele numero em diante. LEMBANDO QUE AQUI EU REMOVI O 99 DO ARRAY.
+
+        console.log(numeros.slice(1));
+
+    // metodo ( join() ), ele junta todos os seus valores do Array e tranforma em uma string
+        
+        console.log(numeros.join('--'));
+        console.log(numeros.join('  '));
+
+console.log('-------------------------------------------')
+
+        var usuario = [
+            'Gabriel',
+            20,
+            'Aprender',
+            2021,
+            'Brasileiro'
+        ];
+
+    // metodo push, colocar um novo elemento no Array
+
+        console.log(usuario);
+
+        usuario.push('SP');
+
+        console.log(usuario);
+
+    // como virificar algo dentro do meu Array ( .includes('Algo') ), e se caso esteja lá me retorna true, do contrario me retornará false.
+
+        console.log(usuario.includes(20));
+    
+    // metodo ( .indexOf() ), se ele encontrar o tal elementro procurado ele retornará qual a posição dele, do cantrário retornará -1
+
+        console.log(usuario.indexOf('Aprender'));
+        console.log(usuario.indexOf('Robson'));
+
+console.log('-------------------------------------------')
+
+    // como juntar dois Array
+
+        var arr1 = [3, 2, 1];
+        var arr2 = ['Gabriel', 'De', 'Souza', 'Martins'];
+
+    // metodo ( .concat() )
+
+        var resultado = arr1.concat(arr2);
+
+        // caso queira alterar a ordem só inverter os Array
+        // se tiver 3 Array seria ( arr1.concat(arr2).concat(arr3) )
+
+        console.log(resultado);
+
+    // forma simples de fazer concat usando (...[], ...[]);
+
+        console.log([...arr1, ...arr2]);
+
+console.log('-------------------------------------------')
+
+    // forma de mostrar elementos do Array individualmente e armazenar em variaveis.
+
+        console.log(usuario);
+
+        var nome = usuario[0];
+        console.log(nome);
+
+        var idade = usuario[1];
+        console.log(idade);
+
+        var ano = usuario[3];
+        console.log(ano);
+
+
+        console.log(nome, idade, ano);
+
+    // forma simples de armazenar os elementos dos Array nas variaveis.
+
+        var [ nome, idade, , ano ] = usuario;
+        console.log(nome, idade, ano);
+    </script>
+</body>
+</html>
