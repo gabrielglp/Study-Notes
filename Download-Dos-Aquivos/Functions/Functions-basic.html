@@ -91,12 +91,60 @@ console.log('-------------------------------------------')
             console.log('Executei', nome);
         }('Gabriel'));
 
+        (function autoExecuta(nome) {
+            console.log('Foi');
+        }());
+
+console.log('-------------------------------------------')
+ 
+
+    // um tipo de "function anonima", que nada mais é uma função sem nome
+
         var subtraiDoisNumeros = function (a, b) {
             return a - b;
         };
 
         console.log(subtraiDoisNumeros(9, 5));
 
+        var subtraiTresNumeros = function (a, b, c) {
+            return a - b - c;
+        };
+
+        console.log(subtraiDoisNumeros(9, 5, 8));
+
+console.log('-------------------------------------------')
+
+    // function Callback
+        
+        function somaCallback(a, b, fnCallback ) {
+            return fnCallback(a + b);
+        };
+
+        console.log(somaCallback(10, 3, function(total) {
+            return total * 2;
+        }));
+
+        console.log(somaCallback(5, 2, function(total) {
+            return total + 20;
+        }));
+
+console.log('-------------------------------------------')
+
+    //function de valores default
+
+        function escrevaNome(nome = 'Gabriel', idade = 20) {
+            console.log(nome);
+            console.log(idade);
+        }
+
+        escrevaNome('Martins', 20);
+
+        function escrevaNome(nome = 'Gabriel', idade = 20) {
+            console.log(nome);
+            console.log(idade);
+        }
+
+        escrevaNome();
     </script>
 </body>
 </html>
